@@ -1,0 +1,8 @@
+{
+  "name": "pornhub-search-api",
+  "version": "1.0.0",
+  "main": "api/search.js",
+  "dependencies": {
+    "@justalk/pornhub-api": "^3.5.0"
+  }
+}
