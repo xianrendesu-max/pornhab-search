@@ -56,7 +56,8 @@ def search_videos(q: str = Query(..., min_length=1)):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-# Vercel用にアプリを公開
+# Vercelはモジュールレベルのappを自動で認識するため、uvicorn.runは不要ですが
+# ローカル開発用に残しておきます
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)
